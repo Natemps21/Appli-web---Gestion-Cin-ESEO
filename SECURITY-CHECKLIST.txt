@@ -1,0 +1,16 @@
+Avant chaque "git add" / premier push GitHub
+================================================
+[ ] Aucun fichier .env ni .env.local dans le staging (git status).
+[ ] Aucun dossier bin/ ou obj/ listé (sortie de build .NET).
+[ ] Aucun node_modules/ listé.
+[ ] appsettings.json à la racine de ClubCineAPI = sans Atlas / sans vrai mot de passe.
+[ ] Pas de dump type structure*.txt avec copie de fichiers du projet.
+[ ] Secrets MongoDB / JWT uniquement dans : dotnet user-secrets, variables d'environnement, ou fichier local NON suivi par Git.
+
+Commande utile (PowerShell, à la racine du dépôt) :
+  Get-ChildItem -Recurse -Include bin,obj -Directory | Remove-Item -Recurse -Force
+
+Après changement de UserSecretsId dans le .csproj, reconfigurer :
+  cd ClubCineAPI
+  dotnet user-secrets set "MongoDbSettings:ConnectionString" "<votre URI>"
+  dotnet user-secrets set "JwtSettings:Key" "<clé 32+ caractères>"

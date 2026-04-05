@@ -1,0 +1,6 @@
+@ClubCineAPI_HostAddress = http://localhost:5091
+
+GET {{ClubCineAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

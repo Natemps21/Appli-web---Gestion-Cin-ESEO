@@ -1,0 +1,7 @@
+<Project>
+  <!-- Évite d'embarquer l'URL du dépôt distant dans les métadonnées de build (obj / packages). -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>false</PublishRepositoryUrl>
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+  </PropertyGroup>
+</Project>
